@@ -7,35 +7,78 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>月等效業績試算器</h1>
+  <div class="page">
+    <div class="header">
+  <div class="badge">URS CLINIC</div>
+  <h1>諮詢師績效試算系統</h1>
+  <p class="header-note">依月等效業績與職務配置進行試算</p>
+</div>
 
-    <div class="card">
-      <p>基本薪資</p>
-      <input id="baseSalary" type="number" value="29500" />
+    <div class="grid">
+      <div class="card">
+        <h2>輸入資料</h2>
 
-      <p>職務相關報酬總額</p>
-      <input id="jobAllowance" type="number" value="12090" />
+        <label for="baseSalary">基本薪資</label>
+        <input id="baseSalary" type="number" value="29500" />
 
-      <p>本月總業績</p>
-      <input id="revenue" type="number" value="500000" />
+        <label for="jobAllowance">職務相關報酬總額</label>
+        <input id="jobAllowance" type="number" value="12090" />
 
-      <p>諮詢天數</p>
-      <input id="consultDays" type="number" value="5" />
+        <label for="revenue">本月總業績</label>
+        <input id="revenue" type="number" value="500000" />
 
-      <p>總上班天數</p>
-      <input id="totalDays" type="number" value="20" />
+        <label for="consultDays">諮詢天數</label>
+        <input id="consultDays" type="number" value="5" />
 
-      <button id="calcBtn">開始試算</button>
-    </div>
+        <label for="totalDays">總上班天數</label>
+        <input id="totalDays" type="number" value="20" />
 
-    <div class="card">
-      <h2>結果</h2>
-      <p>原職務天數：<span id="originalDays">-</span></p>
-      <p>月等效業績：<span id="equivalentRevenue">-</span></p>
-      <p>職務相關報酬實領：<span id="actualAllowance">-</span></p>
-      <p>預估績效獎金：<span id="bonus">-</span></p>
-      <p>預估總收入：<span id="totalIncome">-</span></p>
+        <button id="calcBtn">開始試算</button>
+      </div>
+
+      <div class="card result-card">
+        <h2>試算結果</h2>
+
+        <div class="result-row">
+          <span class="label">原職務天數</span>
+          <span class="value" id="originalDays">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">月等效業績</span>
+          <span class="value" id="equivalentRevenue">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">適用抽成比例</span>
+          <span class="value" id="rate">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">職業適合度</span>
+          <span class="value" id="level">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">職務相關報酬實領</span>
+          <span class="value" id="actualAllowance">-</span>
+        </div>
+
+        <div class="result-row">
+          <span class="label">預估績效獎金</span>
+          <span class="value" id="bonus">-</span>
+        </div>
+
+        <div class="result-row total-row">
+          <span class="label">預估總收入</span>
+          <span class="value" id="totalIncome">-</span>
+        </div>
+
+        <div class="result-row diff-row">
+          <span class="label">與原職務模式差額</span>
+          <span class="value" id="difference">-</span>
+        </div>
+      </div>
     </div>
   </div>
 
